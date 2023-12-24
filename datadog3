@@ -1,0 +1,32 @@
+APM(application performance monitoring)
+
+--> APM is a collection of tools and processes to collect the experiences,to collect the response time,analyze the response time and that process is called APM.
+APM gives you grouped views of your application's performance trends for quick and easy diagnosis of performance problems.
+APM helps you understand and improve the relationships between your applications,your customers,and your business.
+
+How to do APM?
+
+-->1)Agent (this agent is different then datadog agent) DataDog agent is a infra agent 	here we need different kind of agent.
+-->2)Agentless
+
+Agent Based Solution: This is a solution where you have a piece of software,or an agent	if you will,injected within an Application.It will report back on what this application is doing internally along with complex metrics.
+It will report  back on what this application is doing internally along with complex metrics.
+
+Example: Java project will have all the applications in jar file,so you will deploy agent in a jar file.
+
+
+#End goal of APM is simple
+-->:Automatic reports
+   :Alerts,and
+   :Warning signals -> when your response time of your transactions start increasing,red flags are waved.When a transaction starts falling.
+
+APM common terminology
+-> Number of users ->Hits per second ->Errors per second(through http code) ->Response time ->Latency ->Connect time ->Throughput
+
+#What is trace?
+--> Transaction is a collection of traces and each trace is between the two endpoint.Endpoint can be two services or microservice or any functions calls.
+
+Performance monitoring uses traces to collect data about these processes.A trace is a report that contains data captured between two points in time in your app.The collected performance data
+for each trace are called metrics and vary depending on the type of trace.
+
+

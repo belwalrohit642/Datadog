@@ -1,0 +1,34 @@
+Datadog is a monitoring service for cloud-scale applications,providing monitoring of servers,databases,tools,and services,though a SaaS-based data analytics platform.
+
+They built Datadog to be cloud infrastructure monitoring service,with a dashboard,alerting and visualizations of metrics.
+
+
+Agent: It gathers system metrics,integrates with key software we use,and provides a standard interface to which our applications can send custom metrics.
+The agent is deployable via a chef cookbook or ansbile .It requires minimal configuration.
+
+Integrations: Datadog has prebuilt integrations to pull data from almost every important service we use.
+
+Events: Through the integrations datadog generates a consolidated event stream that we  can filter and search as needed.
+The interface makes seraching and filerting events straightforward.
+
+Dashboards: Datadog lets us build dashboards that combines metrics from many different sources. We can combine and transform metrics to make them more useful. It also provides an powerful interface for interactive exploration of metrics.
+
+Alerting: Datadog has nice stream processing capabilities for generating alerts,and it can surface them in services we use like slack and pagerduty.
+
+
+
+FLOW IN DATADOG
+
+--> Install the agent and agent  will gather the metrics and start exporting  the metrics on the datadog site.
+
+#DataDog High-level architecture
+
+DataDog backend: backend is built using a number of open and closed source technologies including D3,apache cassandra,Kafka,PostgressSQL,etc.
+DataDog agent: Datadog uses a GO based agent.
+
+
+Datadog Pricing Depends on two factor:
+--> Number of nodes we are monitoring through datadog. 
+--> The amount of storage we are using.
+
+

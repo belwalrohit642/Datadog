@@ -1,0 +1,67 @@
+#What is Log?
+-->Log=record related to whatever activities occuring on an information system.
+
+Log aka Machine data is everywhere.In fact you are generating it right now.
+
+########################################################
+Server & Workstation logs
+:Linux/window :Log files :Access :File system
+
+Networks
+:Firewall :Warnings :Alerts :Ip addresses
+
+Databases
+:Audit logs :Configurations :Schemas :Tables :Queries
+
+Web
+:Transactions,Click-stream,Location,Browser,time.
+
+
+#Analyzing Log Data: Why its important?
+->Production Monitoring and Debugging ->Resource Usage ->Http errors ->Slow queries ->security issues.
+
+
+
+#Sending logs to datadog
+1)Sending logs manually
+2)Send logs from a file
+
+#Sending logs to datadog:Sending logs manually
+->The secure tcp endpoint is intake.logs.datadoghq.com (or port 10514 for nonsecure connections).
+
+:telnet intake.logs.datadoghq.com 10514
+
+
+#Sending logs to datadog:Send logs from a file
+
+-> Install datadog agent
+->Verify datadog-agent status
+->Enable log collection(Edit the datadog.yaml located in /etc/datadog-agent/datadog.yaml and set logs_enabled:true)
+#then restart datadog-agent
+
+---- Monitor a custom file
+
+$touch log_file_to_monitor.log
+$echo "First line of log" >>  log_file_to_monitor.log
+$sudo mkdir -p /etc/datadog-agent/conf.d/custom_log_collection.d/
+$sudo  touch /etc/datadog-agent/conf.d/custom_log_collection.d/conf.yaml
+
+#inside conf.yaml
+#Datadog logs patterns (devopschool)
+logs: 
+ -type: file
+  path: /home/ubuntu/log_file_to_monitor.log
+  source: custom
+  service: user
+
+
+$sudo systemctl restart datadog-agent
+
+
+-Add new logs to the file
+$ echo "New line to the log" >> log_file_to_monitor.log
+
+
+Search Logs using Or and And operator.
+
+

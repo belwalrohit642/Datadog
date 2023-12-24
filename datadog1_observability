@@ -1,0 +1,123 @@
+Monitoring
+--> We collect the data from certain endpoints and then we store it some place and from there we create alerts and dashboards. 
+    Monitoring is the systematic process of collecting,analazing and using information to track a programme's progress towards reaching its objective and to
+    guide management decisions.
+
+
+Why monitor?
+There are many reasons to monitor  a system,including:
+
+Analyzing long-term trends
+-->How big is my database and how fast is it growing? How quickly is my daily-active user count growing?
+
+Comparing over time or experiment groups
+-->How much better is my memcache hit rate with an extra node?Is my site slower than it was last week?
+
+Alerting
+-->Something is broken,and somebody needs to fix it right now! or,something might break soon,so somebody should look soon.
+
+
+What to monitor?
+--> Process/Application Checks
+    : Process identification
+    : Threading information
+    : Memory utilization
+--> System-level checks
+    : CPU
+    : Memory
+    : Disk
+    : Load
+    : Network
+--> API-level checks
+    : APIc call 20X responses
+    : API call error within
+    : API call error on the backend
+--> Message Flow checks
+    : Active clients
+    : Request/response messages
+    : connect failures
+
+
+White Box Monitoring?
+--> White box monitoring is the monitoring of applications running on a server.Monitoring based on metrics exposed by the internals of the system,including logs,interfaces like the java virtual machine profiling interface,or an HTTP handler that emits internal statistics. 
+
+Mainly focus on the internals of the system.
+
+Black Box Monitoring?
+--> Black box monitoring refers to the monitoring of servers with a focus on areas such as disk space,CPU usage,memory usage,load averages,etc.
+    Testing externally visible behaviour as a user would see it.
+
+
+BlackBox monitoring
+: restricted to external service behaviour  eg: ping,http
+
+WhiteBox monitoing
+: shows internal service information eg: request_processing_time, request_errors_total
+
+
+Flow of monitoring Implementation
+-> Sensing/Measurement  -> Collection -> Analysis/Computation -> Alerting ->Visualization.
+
+
+#The Four Golden Signals Monitoring
+-->Latency
+-->Traffic
+-->Errors
+-->Saturation
+
+
+Note: "Monitoring tells you whether a system is working or not. Observability lets you ask why it isn't working.
+
+Observability means assembling all fragments from logs, monitoring tools and organize them in such a way which gives actionable knowledge of the whole environment,thus creating an insight.
+
+Observability is a superset of monitoing.
+
+
+
+#Telemetry
+: Telemetry is the collection of measurements or other data at remote points and their automatic transmission to receiving equipment for monitoring.
+
+MELT
+Four essential telemetry data types: METRICS , LOGS , EVENTS , TRACES.
+
+So if you gather all these four information that means you are closer to setting up a observability.
+
+Metrics:
+
+Simple Explanation: Think of metrics as measurements or data points that give you information about the performance or behavior of a system.
+Example: In a car, a metric could be the speedometer reading, telling you how fast the car is going.
+Events:
+
+Simple Explanation: Events are like notifications that something important happened in a system.
+Example: In a smart home, an event could be the door sensor sending a message that the front door was opened.
+Logs:
+
+Simple Explanation: Logs are detailed records or diaries that capture specific events, actions, or errors in a system.
+Example: In a computer system, a log entry could record when a user logged in, what actions they performed, and any errors that occurred.
+Traces:
+
+Simple Explanation: Traces help you follow a specific transaction or process through a system, showing you the journey it takes and where it spends time.
+Example: When ordering something online, a trace could show each step, like selecting items, entering payment info, and confirming the order.
+
+
+Observability = Logging + Monitoring +  Tracing +  Visualization.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
